@@ -25,12 +25,12 @@
             border: none;
         }
         input[type="submit"] {
-            background-color: pink;
-            color: blue;
+            background-color: darkgreen;
+            color: darkblue;
             cursor: pointer;
         }
         .error {
-            color: red;
+            color: darkred;
         }
     </style>
 </head>
@@ -38,11 +38,12 @@
     <div class="container">
         <h1>Login</h1>
         <form method="POST">
+            <input type="username" name="username" placeholder="Enter Username" required><br>
             <input type="password" name="password" placeholder="Enter Password" required><br>
             <input type="submit" value="Submit">
         </form>
         {% if error %}
-            <p class="error">{{ error }}</p>
+            <p class="bsdk pass sahi dal">{{ error }}</p>
         {% endif %}
     </div>
 </body>
