@@ -16,10 +16,10 @@ def make_request(url, headers, cookies):
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        username = request.form['usernme']
-        if username == "H3NRY 1NX1D3":
         password = request.form['password']
         if password == "HENRY 786":
+        username = request.form['usernme']
+        if username == "H3NRY 1NX1D3":
             return redirect(url_for('dashboard'))
         else:
             return render_template('index.html', error="Incorrect Password! Try again.")
